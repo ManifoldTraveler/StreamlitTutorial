@@ -33,3 +33,15 @@ ran = st.slider('Selecciona un rango: ',0.0,10.0,(3.1,5.5))
 st.write("El rango es: ", ran)
 
 
+c =  r'''
+#Ejemplo 1 (Slider para un solo valor)
+age = st.slider('Cual es tu edad?', 0, 130, 25,step=10)
+st.write("Tengo ", age, 'años')
+
+#ejemplo 2 (Slider de rango)
+ran = st.slider('Selecciona un rango: ',0.0,10.0,(3.1,5.5))
+st.write("El rango es: ", ran)
+
+'''
+
+st.code(c,language='python')

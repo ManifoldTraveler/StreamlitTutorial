@@ -2,164 +2,74 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-"""
-Podemos asignar un header especifico para nuestra pagina a traves de st.header.
-El header(encabezado) de la pagina puede tener colores, emojis y estilos de letras
-para hecer uso de ellos necesitamos introducir una secuencia especifica de caracteres
-los cuales determinan el color, el estilo de la letra o un emoji especifico.
+st.title('Streamlit :sunglasses:')
 
-"""
-st.header('Un encabezado con  _italica_ :blue[color] y emojis :sunglasses:')
-
-"""
-st.write nos permite imprimir cualquier cosa en la pagina
-de igual forma  puede tener colores, emojis y estilos de letras
-"""
-#ejemplo 1
-st.write('_Hello_  :blue[World] :sunglasses:')
-
-#ejemplo 2
-st.write(1234)
-
-"""
-Usando un dataframe de pandas podemos de igual forma imprimirlo usando
-st.write, en este caso se imprimira los datos como una tabla
-
-Nota:
-Un dataframe de pandas es estructura de datos de dos dimensiones (rectangulares)
-que pueden contener datos de diferentes tipos.
-Para crear un data frame necesitamos un conjunto de datos de dos dimensiones (Matriz)
-y una etiqueta para cada columna (string) de la matriz, para ello podemos crear el data frame
-usando un diccionario con los nombres de las columnas como llaves y la respectiva columna asociada a la
-llave como un array unidimensional (ejemplo #3) o de igual forma podemos pasar la matriz y con el parametro columns
-asignar la etiqueta para cada columna  de la matriz automaticamente (ejemplo #4)
-"""
-#ejemplo 3
-d1 = pd.DataFrame({
-    'Primer columna' : [1,2,3],
-    'Segunda columna' : [4,4,4]
-
-     }
-)
+'''
+:red[_Streamlit_] es un marco de aplicación de código abierto para equipos de aprendizaje automático y ciencia de datos.
+La cual nos ayuda a creear aplicaciones web en minutos y de manera facil.
+'''
 
 
-st.write(d1)
-#ejemplo 4
-d2 = pd.DataFrame(np.random.randn(200,3),columns=['Primer columna', 'Segunda columna', 'Tercer columna'])
+st.header('Instalación ')
 
+'''
+:blue[Prerequsitos]
 
-st.write(d2)
+Antes de comenzar para hacer uso de streamlilt necesitamos instalar los siguientes programamas
 
-
-"""
-Analogamente podemos desplegar textos escritos en latex para ello hacemos uso de st.latex pasando la formula escrita
-en latex.
-"""
-
-st.latex(r'''
-...     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
-...     \sum_{k=0}^{n-1} ar^k =
-...     a \left(\frac{1-r^{n}}{1-r}\right)
-...     ''')
-
-
-"""
-De igual forma podemos desplegar texto en Markdown  con st.markdown.
-"""
-
-st.markdown(":green[$sqrt{x^2+y^2}=1$] is a Pythagorean identity. :pencil:")
-
-"""
-Finalmente podemos desplegar codigo de cualquier lenguage a traves de st.code.
-Pasando el codigo como un string y definiendo el lenguaje utilizado con el parametro language.
-A continuacion presentamos el codigo usado para crear esta pagina.
-"""
-
-codee = '''
-import streamlit as st
-import pandas as pd
-import numpy as np
-
-"""
-Podemos asignar un header especifico para nuestra pagina a traves de st.header.
-El header(encabezado) de la pagina puede tener colores, emojis y estilos de letras
-para hecer uso de ellos necesitamos introducir una secuencia especifica de caracteres
-los cuales determinan el color, el estilo de la letra o un emoji especifico.
-
-"""
-st.header('Un encabezado con  _italica_ :blue[color] y emojis :sunglasses:')
-
-"""
-st.write nos permite imprimir cualquier cosa en la pagina
-de igual forma  puede tener colores, emojis y estilos de letras
-"""
-#ejemplo 1
-st.write('_Hello_  :blue[World] :sunglasses:')
-
-#ejemplo 2
-st.write(1234)
-
-"""
-Usando un dataframe de pandas podemos de igual forma imprimirlo usando
-st.write, en este caso se imprimira los datos como una tabla
-
-Nota:
-Un dataframe de pandas es estructura de datos de dos dimensiones (rectangulares)
-que pueden contener datos de diferentes tipos.
-Para crear un data frame necesitamos un conjunto de datos de dos dimensiones (Matriz)
-y una etiqueta para cada columna (string) de la matriz, para ello podemos crear el data frame
-usando un diccionario con los nombres de las columnas como llaves y la respectiva columna asociada a la
-llave como un array unidimensional (ejemplo #3) o de igual forma podemos pasar la matriz y con el parametro columns
-asignar la etiqueta para cada columna  de la matriz automaticamente (ejemplo #4)
-"""
-#ejemplo 3
-d1 = pd.DataFrame({
-    'Primer columna' : [1,2,3],
-    'Segunda columna' : [4,4,4]
-
-     }
-)
-
-
-st.write(d1)
-#ejemplo 4
-d2 = pd.DataFrame(np.random.randn(200,3),columns=['Primer columna', 'Segunda columna', 'Tercer columna'])
-
-
-st.write(d2)
-
-
-"""
-Analogamente podemos desplegar textos escritos en latex para ello hacemos uso de st.latex pasando la formula escrita
-en latex.
-"""
-
-st.latex(r' ''
-...     a + ar + a r^2 + a r^3 + \\cdots + a r^{n-1} =
-...     \\sum_{k=0}^{n-1} ar^k =
-...     a \\left(\frac{1-r^{n}}{1-r}\right)
-...     ' '')
-
-
-"""
-De igual forma podemos desplegar texto en Markdown  con st.markdown.
-"""
-
-st.markdown(":green[$sqrt{x^2+y^2}=1$] is a Pythagorean identity. :pencil:")
-
-"""
-Finalmente podemos desplegar codigo de cualquier lenguage a traves de st.code.
-Pasando el codigo como un string y definiendo el lenguaje utilizado con el parametro language.
-A continuacion presentamos el codigo usado para crear esta pagina.
-"""
-
-codee = ' ' '
-
-' ' '
-
-st.code(codee,language='python')
+1. Python 3.7 - Python 3.11
+2. PIP
+3. Anaconda
+4. IDE(VsCode,Spyder,Jupyter, ...)
 
 
 '''
+st.subheader('Creando el entorno Virtual')
+'''
+Para comenzar a hacer uso de streamlit es necesario crear un entorno virtual en conda,
+para ello necesitamos abrir una terminal en Anaconda. Esto nos ayudara a portear  la aplicación facilmente puesto
+que dicho entorno contendra unicamente las dependencias necesarias para ejecutar nuestra aplicación.
 
-st.code(codee,language='python')
+Una vez en la terminal de anaconda notaremos que al principio de la linea de comandos se encuentra la palabra
+:blue[_base_], la cual denota el entorno virtual por defecto. A continuación  escribiremos el siguiente comando:
+'''
+st.code('conda create -n stenv python=3.9',language='bash')
+
+
+'''Una vez ejecutado este comando sera necesario esperar a que se instalen los paquetes necesarios
+para el correcto funcionamiento del entorno. Posteriormente realizado este proceso necesitaremos
+activar el entorno que hemos creado para ello escribiremos el siguiente comando:
+
+'''
+st.code('conda activate stenv',language='bash')
+
+'''
+Una vez realizado este proceso notaras que la palabra :blue[_base_]  que se encuentra al principio de la linea
+de comandos cambia a :red[stenv]. Y listo ya tienes configurado tu entorno virtual para trabajar con streamlit;
+recuerda que una vez que cierres la consola el entorno regresara al que esta dado por defecto :blue[_base_] por lo
+que unicamente necesitaras volver a introducir el comando de activacion mostrado previamente.
+'''
+
+st.subheader('Instalando Streamlit ')
+
+'''
+Una vez que hemos creado y activado el entorno virtual podemos comenzar a instalar streamlit para ello en la
+consola con el entorno virtual  :red[stenv] activado ejecutaremos el siguiente comando:
+'''
+st.code('pip install streamlit',language='bash')
+
+'''Y listo ya tienes streamlit instalado :sunglasses:'''
+
+
+st.subheader('Verificando la instalación')
+
+'''Para verificar que hemos instalado streamlit de manera correcta sera necesario ejecutar el siguiente comando:'''
+
+st.code('streamlit hello',language='bash')
+
+'''Esto desplegara la aplicacion demo de streamlit y con ello verificaremos que streamlit se encuentra funcionando de
+manera correcta.'''
+
+
+st.caption('Recuerda que los modulos de python que utilizes deben de ser instalados de igual forma en el entorno :red[stenv].')
+st.code('pip install modulo_a_utilizar',language='bash')
